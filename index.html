@@ -5,20 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tammy's Final Project</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+   <!-- <link rel="stylesheet" href="style.css"> -->
 
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<!-- testing pull req again 3-->
 <body>
-    <div class="wrapper">
+    <div class="wrapper"> 
         <header class="header">
             <h1>Representation of Women and Men in TV</h1>
         </header>
         <div class="container">
             <div class="left_section box">
                 <h3>Bar Chart</h3>
-            </div>
+
+                <div class="chart_container">
+                    <canvas id="myChart"></canvas>
+                </div>
+
+                <div class="input_TV box">
+                    <form action="https://www.anapioficeandfire.com/api/characters" class="box main_form">
+                        <div>
+                            <label for="tv">TV Name</label>
+                            <input type="text" id="tv" name="tv"> 
+                        </div>
+                        <button type="button" class="filter_button">Filter Data</button>
+                        <button type="submit">Load Data</button>
+                    </form>            
+                </div>
             <div class="right_section box">
-                <h3>Circle Packing</h3>  <!-- test comment -->
+                <h3>Circle Packing</h3>  
                 <div class="grid">
                     <div class="box">TV show 1</div>
                     <div class="box">TV show 2</div>
@@ -30,8 +47,9 @@
             </div>
         </div>
     </div>
-    <footer class="footer"><a href="https://github.com/tammymolina/INST377-Final-Project" target="_blank"
-            rel="noopener noreferrer">tammymolina Github Account</a></footer>
-</body>
- <!-- testing comment -->
+    <footer class="footer"><a href="https://github.com/tammymolina/INST377-Final-Project" target="_blank" rel="noopener noreferrer">tammymolina Github Account</a></footer>
+
+   <script src="./script.js"></script>        
+
+</body> 
 </html>
