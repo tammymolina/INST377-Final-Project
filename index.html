@@ -25,17 +25,20 @@
                 </div>
 
                 <div class="input_TV box">
-                    <form action="https://www.anapioficeandfire.com/api/characters" class="box main_form">
+                    <form action="https://api.tvmaze.com/shows" class="box main_form">
                         <div>
                             <label for="tv">TV Name</label>
                             <input type="text" id="tv" name="tv"> 
                         </div>
+                        <button type="button" id="data_load">Load Data</button>
                         <button type="button" class="filter_button">Filter Data</button>
-                        <button type="submit">Load Data</button>
-                    </form>            
+                        <button type="button" id="generate">Generate List</button>
+                    </form>  
+                    <div class="lds-ellipsis" id="data_load_animation"><div></div><div></div><div></div><div></div></div>          
                 </div>
             <div class="right_section box">
                 <h3>Circle Packing</h3>  
+                <ol class="tv_list box">
                 <div class="grid">
                     <div class="box">TV show 1</div>
                     <div class="box">TV show 2</div>
