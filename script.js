@@ -54,7 +54,7 @@ function filterList(list, query) {
   }
 
   async function getData() {
-    const url = 'https://www.anapioficeandfire.com/api/characters';
+    const url = 'https://api.tvmaze.com/shows';
     const data = await fetch(url);
     const json = await data.json();
     const reply = json.filter((item) => Boolean(item.gender)).filter((item) => Boolean(item.name));
@@ -100,7 +100,7 @@ function filterList(list, query) {
       */
   
       // Basic GET request - this replaces the form Action
-      const results = await fetch('https://www.anapioficeandfire.com/api/characters');
+      const results = await fetch('https://api.tvmaze.com/shows');
   
       // This changes the response from the GET into data we can use - an "object"
       currentList = await results.json();
