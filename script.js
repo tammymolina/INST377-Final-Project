@@ -320,8 +320,6 @@ async function mainEvent() { // the async keyword means we can make API requests
 
       }
     }
-
-    //injectHTML(newList);
   })
 
   clearDataButton.addEventListener("click", (event) => {
