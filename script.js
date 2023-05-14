@@ -226,6 +226,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   const loadAnimation = document.querySelector('#data_load_animation');
   loadAnimation.style.display = 'none';
   generateListButton.classList.add('hidden');
+  clearDataButton.classList.add('hidden');
 
 
   const chartTarget = document.querySelector('#myChart');
@@ -242,6 +243,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   if (parsedData?.length > 0 && parsedDataCast?.length > 0) {
     console.log("parsedData?.length: ", parsedData?.length);
     generateListButton.classList.remove('hidden');
+    clearDataButton.classList.remove('hidden');
   }
 
   /* We need to listen to an "event" to have something happen in our page - here we're listening for a "submit" */
@@ -269,6 +271,7 @@ async function mainEvent() { // the async keyword means we can make API requests
 
     if (parsedData?.length > 0 && parsedDataCast?.length > 0) {
       generateListButton.classList.remove('hidden');
+      clearDataButton.classList.remove('hidden');
       console.log("in load data buttn parsedData?.length: ", parsedData?.length);
     }
 
@@ -282,18 +285,6 @@ async function mainEvent() { // the async keyword means we can make API requests
     but it will only be defined _after_ the request resolves - any filtering on it before that
     simply won't work.
   */
-
-  filterButton.addEventListener('click', (event) => {
-    console.log('clicked FilterButton');
-
-    const formData = new FormData(mainForm);
-    const formProps = Object.fromEntries(formData);
-
-    console.log(formProps);
-    const newList = filterList(currentList, formProps.tv);
-
-    console.log(newList);
-  })
 
   generateListButton.addEventListener('click', (event) => {
     console.log('generate chart');
@@ -329,8 +320,6 @@ async function mainEvent() { // the async keyword means we can make API requests
 
       }
     }
-
-    //injectHTML(newList);
   })
 
   clearDataButton.addEventListener("click", (event) => {
