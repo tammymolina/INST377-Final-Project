@@ -4,8 +4,7 @@ https://tammymolina.github.io/INST377-Final-Project/
 
 
     Title: Representation of Women and Men in TV
-    Description of target browsers (iOS? Android? Which ones? Which versions?): Google Chrome, Firefox, IE, both on desktop and mobile
-    Documentation needs to be written in Markdown (*.md) files, nicely formatted
+    Description of target browsers: Google Chrome, Firefox, IE, both on desktop and mobile
 
 Description of your project:
 
